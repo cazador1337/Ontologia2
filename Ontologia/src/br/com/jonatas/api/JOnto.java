@@ -39,20 +39,13 @@ public class JOnto {//Este Cara se vc for pensar no modelo MVC este é seu Contr
         return result;
     }
 
-    public MapTreeNode newModelTree(String... args) {//Este cara cria o modelo para o Tree node da view
-        MapTreeNode root = new MapTreeNode("Assuntos");//Este é nome do root lá
-        MapTreeNode children;//auxiliar chamado de children pq ele é o children do root.
-        for (String arg : args) {//jonatas aquele (String... args) é igual a isto (String[] args), a diferença esta em como usar
-            //no meu vc usa assim newModelTree("tema A", "tema B") no segundo vc tem que passar um array, no meu eu posso passar um array, também
-            //como no casso do TREE_ROOT que é um array, eles geram os mesmos resultados ok?
-            children = new MapTreeNode(this, this.readOntologia(arg));//Isto vai começar realmente a criar os node para o nosso TRee, olhar o MapTreeNode agora
-            root.add(children);//espero que vc tenha lido a MapTreeNode agora vou passar para o map.
-        }
+    public MapTreeNode newModelTree(String args) {//Este cara cria o modelo para o Tree node da view
+        MapTreeNode root = new MapTreeNode(this, this.readOntologia(args));        
         return root;
     }
 
     public MapTreeNode newModelTree() {
-        return newModelTree(TREE_ROOT);
+        return newModelTree(TREE_ROOT[0]);
     }
 
     public LinkedList<String> readInstances(OntClass source) {
