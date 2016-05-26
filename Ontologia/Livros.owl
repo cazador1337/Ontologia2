@@ -1,0 +1,718 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY untitled-ontology-10 "http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:untitled-ontology-10="http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <Ontology rdf:about="http://www.semanticweb.org/joãopaulovolpate/ontologies/2016/0/untitled-ontology-10"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#altLabel -->
+
+    <AnnotationProperty rdf:about="&untitled-ontology-10;altLabel">
+        <rdfs:subPropertyOf rdf:resource="&rdfs;label"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#prefLabel -->
+
+    <AnnotationProperty rdf:about="&untitled-ontology-10;prefLabel">
+        <rdfs:subPropertyOf rdf:resource="&rdfs;label"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#AutorDe -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-10;AutorDe">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <inverseOf rdf:resource="&untitled-ontology-10;doAutor"/>
+        <rdfs:range>
+            <Restriction>
+                <onProperty rdf:resource="&untitled-ontology-10;doAutor"/>
+                <someValuesFrom rdf:resource="&untitled-ontology-10;Livros"/>
+            </Restriction>
+        </rdfs:range>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#EditoraDe -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-10;EditoraDe">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#daEditora -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-10;daEditora">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <inverseOf rdf:resource="&untitled-ontology-10;EditoraDe"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#doAutor -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-10;doAutor">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:range>
+            <Restriction>
+                <onProperty rdf:resource="&untitled-ontology-10;AutorDe"/>
+                <someValuesFrom rdf:resource="&untitled-ontology-10;Livros"/>
+            </Restriction>
+        </rdfs:range>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#AltLabel -->
+
+    <DatatypeProperty rdf:about="&untitled-ontology-10;AltLabel">
+        <rdfs:label xml:lang="en">AlternativeLabel</rdfs:label>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#PrefLabel -->
+
+    <DatatypeProperty rdf:about="&untitled-ontology-10;PrefLabel">
+        <rdfs:label xml:lang="en">PreferedLabel</rdfs:label>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#RelatedTo -->
+
+    <DatatypeProperty rdf:about="&untitled-ontology-10;RelatedTo">
+        <rdfs:label xml:lang="en">RelatedTo</rdfs:label>
+        <rdfs:label xml:lang="pt">RelacionadoA</rdfs:label>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Tag -->
+
+    <DatatypeProperty rdf:about="&untitled-ontology-10;Tag">
+        <rdfs:label xml:lang="en">Tag</rdfs:label>
+        <rdfs:label xml:lang="pt">Palavra-Chave</rdfs:label>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Abstract_data_types -->
+
+    <Class rdf:about="&untitled-ontology-10;Abstract_data_types">
+        <rdfs:label xml:lang="en">AbstractDataTypes</rdfs:label>
+        <rdfs:label xml:lang="pt">TiposDeDadosAbstratos</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Language_features"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Assembly_languages -->
+
+    <Class rdf:about="&untitled-ontology-10;Assembly_languages">
+        <rdfs:label xml:lang="en">AssemblyLanguages</rdfs:label>
+        <rdfs:label xml:lang="pt">LinguagensAssembly</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Language_types"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Autores -->
+
+    <Class rdf:about="&untitled-ontology-10;Autores">
+        <rdfs:label xml:lang="en">Autors</rdfs:label>
+        <rdfs:label xml:lang="pt">Autores</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Classes_and_objects -->
+
+    <Class rdf:about="&untitled-ontology-10;Classes_and_objects">
+        <rdfs:label xml:lang="en">ClassesAndObjects</rdfs:label>
+        <rdfs:label xml:lang="pt">ClassesEObjetos</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Language_features"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Concurrent_programming_languages -->
+
+    <Class rdf:about="&untitled-ontology-10;Concurrent_programming_languages">
+        <rdfs:label xml:lang="en">ConcurrentProgrammingLanguages</rdfs:label>
+        <rdfs:label xml:lang="pt">LinguagensDeProgramaçãoConcorrentes</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Language_types"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Concurrent_programming_structures -->
+
+    <Class rdf:about="&untitled-ontology-10;Concurrent_programming_structures">
+        <rdfs:label xml:lang="en">ConcurrentProgrammingStructures</rdfs:label>
+        <rdfs:label xml:lang="pt">EstruturasDeProgramaçãoConcorrente</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Language_features"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Constraint_and_logic_languages -->
+
+    <Class rdf:about="&untitled-ontology-10;Constraint_and_logic_languages">
+        <rdfs:label xml:lang="en">ConstraintAndLogicLanguages</rdfs:label>
+        <rdfs:label xml:lang="pt">LinguagensDeRestriçãoEDeLógica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Language_types"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Constraints -->
+
+    <Class rdf:about="&untitled-ontology-10;Constraints">
+        <rdfs:label xml:lang="en">Constraints</rdfs:label>
+        <rdfs:label xml:lang="pt">Restrições</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Language_features"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Control_structures -->
+
+    <Class rdf:about="&untitled-ontology-10;Control_structures">
+        <rdfs:label xml:lang="en">ControlStructures</rdfs:label>
+        <rdfs:label xml:lang="pt">EstruturasDeControle</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Language_features"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Coroutines -->
+
+    <Class rdf:about="&untitled-ontology-10;Coroutines">
+        <rdfs:label xml:lang="en">Co-routines</rdfs:label>
+        <rdfs:label xml:lang="pt">Co-rotinas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Language_features"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Data_flow_languages -->
+
+    <Class rdf:about="&untitled-ontology-10;Data_flow_languages">
+        <rdfs:label xml:lang="en">DataFlowLanguages</rdfs:label>
+        <rdfs:label xml:lang="pt">LinguagensDeFluxoDeDados</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Language_types"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Data_types_and_structures -->
+
+    <Class rdf:about="&untitled-ontology-10;Data_types_and_structures">
+        <rdfs:label xml:lang="en">DataTypesAndStructures</rdfs:label>
+        <rdfs:label xml:lang="pt">TipoDeDadosEEstruturas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Language_features"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Distributed_programming_languages -->
+
+    <Class rdf:about="&untitled-ontology-10;Distributed_programming_languages">
+        <rdfs:label xml:lang="en">DistributedProgrammingLanguages</rdfs:label>
+        <rdfs:label xml:lang="pt">LinguagensDeProgramaçãoDistribuídas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Language_types"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Extensible_languages -->
+
+    <Class rdf:about="&untitled-ontology-10;Extensible_languages">
+        <rdfs:label xml:lang="en">ExtensibleLanguages</rdfs:label>
+        <rdfs:label xml:lang="pt">LinguagensExtensíveis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Language_types"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Frameworks -->
+
+    <Class rdf:about="&untitled-ontology-10;Frameworks">
+        <rdfs:label xml:lang="en">Frameworks</rdfs:label>
+        <rdfs:label xml:lang="pt">Frameworks</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Language_features"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Functional_languages -->
+
+    <Class rdf:about="&untitled-ontology-10;Functional_languages">
+        <rdfs:label xml:lang="en">FunctionalLanguages</rdfs:label>
+        <rdfs:label xml:lang="pt">LinguagensFuncionais</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Language_types"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#General_programming_languages -->
+
+    <Class rdf:about="&untitled-ontology-10;General_programming_languages">
+        <rdfs:label xml:lang="en">GeneralProgrammingLanguages</rdfs:label>
+        <rdfs:label xml:lang="pt">LinguagensDeProgramaçãoGerais</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Software_notations_and_tools"/>
+        <untitled-ontology-10:prefLabel xml:lang="pt">teste</untitled-ontology-10:prefLabel>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Imperative_languages -->
+
+    <Class rdf:about="&untitled-ontology-10;Imperative_languages">
+        <rdfs:label xml:lang="en">ImperativeLanguages</rdfs:label>
+        <rdfs:label xml:lang="pt">LinguagensImperativas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Language_types"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Inheritance -->
+
+    <Class rdf:about="&untitled-ontology-10;Inheritance">
+        <rdfs:label xml:lang="en">Inheritance</rdfs:label>
+        <rdfs:label xml:lang="pt">Herança</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Language_features"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Language_features -->
+
+    <Class rdf:about="&untitled-ontology-10;Language_features">
+        <rdfs:label xml:lang="en">LanguageFeatures</rdfs:label>
+        <rdfs:label xml:lang="pt">CaracterísticasDasLinguagens</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;General_programming_languages"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Language_types -->
+
+    <Class rdf:about="&untitled-ontology-10;Language_types">
+        <rdfs:label xml:lang="en">LanguagesTypes</rdfs:label>
+        <rdfs:label xml:lang="pt">TiposDeLinguagens</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;General_programming_languages"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Livros -->
+
+    <Class rdf:about="&untitled-ontology-10;Livros">
+        <rdfs:label xml:lang="en">Books</rdfs:label>
+        <rdfs:label xml:lang="pt">Livros</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Modules_/_Packages -->
+
+    <Class rdf:about="&untitled-ontology-10;Modules_/_Packages">
+        <rdfs:label xml:lang="en">Modules/Packages</rdfs:label>
+        <rdfs:label xml:lang="pt">Modulos/Pacotes</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Language_features"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Multiparadigm_languages -->
+
+    <Class rdf:about="&untitled-ontology-10;Multiparadigm_languages">
+        <rdfs:label xml:lang="en">MultiparadigmLanguages</rdfs:label>
+        <rdfs:label xml:lang="pt">LinguagensDeMultiparadigma</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Language_types"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Object_oriented_languages -->
+
+    <Class rdf:about="&untitled-ontology-10;Object_oriented_languages">
+        <rdfs:label xml:lang="en">ObjectOrientedLanguages</rdfs:label>
+        <rdfs:label xml:lang="pt">LinguagensOrientadasAObjetos</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Language_types"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Parallel_programming_languages -->
+
+    <Class rdf:about="&untitled-ontology-10;Parallel_programming_languages">
+        <rdfs:label xml:lang="en">ParallelProgrammingLanguages</rdfs:label>
+        <rdfs:label xml:lang="pt">LinguagensDeProgramaçãoParalela</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Language_types"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Patterns -->
+
+    <Class rdf:about="&untitled-ontology-10;Patterns">
+        <rdfs:label xml:lang="en">Patterns</rdfs:label>
+        <rdfs:label xml:lang="pt">Padrões</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Language_features"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Polymorphism -->
+
+    <Class rdf:about="&untitled-ontology-10;Polymorphism">
+        <rdfs:label xml:lang="en">Polymorphism</rdfs:label>
+        <rdfs:label xml:lang="pt">Polimorfismo</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Language_features"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Procedures,_functions_and_subroutines -->
+
+    <Class rdf:about="&untitled-ontology-10;Procedures,_functions_and_subroutines">
+        <rdfs:label xml:lang="en">ProceduresFunctionsAndSubroutines</rdfs:label>
+        <rdfs:label xml:lang="pt">ProcedimentosFunçõesESubrotinas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Language_features"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Recursion -->
+
+    <Class rdf:about="&untitled-ontology-10;Recursion">
+        <rdfs:label xml:lang="en">Recursion</rdfs:label>
+        <rdfs:label xml:lang="pt">Recursão</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Language_features"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Software_notations_and_tools -->
+
+    <Class rdf:about="&untitled-ontology-10;Software_notations_and_tools">
+        <rdfs:label xml:lang="en">SoftwareNotationsAndTools</rdfs:label>
+        <rdfs:label xml:lang="pt">NotaçõesEFerramentasDeSoftware</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Softwares_e_suas_Engenharias"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Softwares_e_suas_Engenharias -->
+
+    <Class rdf:about="&untitled-ontology-10;Softwares_e_suas_Engenharias">
+        <rdfs:label xml:lang="en">SoftwareAndItsEngineering</rdfs:label>
+        <rdfs:label xml:lang="pt">SoftwaresESuasEngenharias</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Very_high_level_languages -->
+
+    <Class rdf:about="&untitled-ontology-10;Very_high_level_languages">
+        <rdfs:label xml:lang="en">VeryHighLevelLanguages</rdfs:label>
+        <rdfs:label xml:lang="pt">LinguagensDeNivelMuitoAlto</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-10;Language_types"/>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#AscencioAFG -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-10;AscencioAFG">
+        <rdf:type rdf:resource="&untitled-ontology-10;Autores"/>
+        <untitled-ontology-10:prefLabel xml:lang="pt">Ana F G Ascencio</untitled-ontology-10:prefLabel>
+        <untitled-ontology-10:AutorDe rdf:resource="&untitled-ontology-10;Fundamentos_da_programação_de_computadores:_Algoritmos,_Pascal,_C/C++_e_Java"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#BarnesD -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-10;BarnesD">
+        <rdf:type rdf:resource="&untitled-ontology-10;Autores"/>
+        <untitled-ontology-10:AutorDe rdf:resource="&untitled-ontology-10;Programação_Orientada_a_Objetos_com_Java:_Uma_Introdução_Prática_usando_o_BlueJ"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#CamposEAV -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-10;CamposEAV">
+        <rdf:type rdf:resource="&untitled-ontology-10;Autores"/>
+        <untitled-ontology-10:AutorDe rdf:resource="&untitled-ontology-10;Fundamentos_da_programação_de_computadores:_Algoritmos,_Pascal,_C/C++_e_Java"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Estruturas_de_Dados_Usando_C -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-10;Estruturas_de_Dados_Usando_C">
+        <rdf:type rdf:resource="&untitled-ontology-10;Control_structures"/>
+        <rdf:type rdf:resource="&untitled-ontology-10;Imperative_languages"/>
+        <rdf:type rdf:resource="&untitled-ontology-10;Livros"/>
+        <rdf:type rdf:resource="&untitled-ontology-10;Recursion"/>
+        <rdfs:label xml:lang="pt">EstruturasDeDadosUsandoC</rdfs:label>
+        <untitled-ontology-10:Tag rdf:datatype="&xsd;string">ALGORITMOS E ESTRUTURA DE DADOS</untitled-ontology-10:Tag>
+        <untitled-ontology-10:Tag rdf:datatype="&xsd;string">C - LINGUAGEM DE PROGRAMACAO</untitled-ontology-10:Tag>
+        <untitled-ontology-10:Tag rdf:datatype="&xsd;string">DADOS - ESTRUTURAS</untitled-ontology-10:Tag>
+        <untitled-ontology-10:AltLabel xml:lang="pt">Estrutura De Dados Usando C</untitled-ontology-10:AltLabel>
+        <rdfs:comment>TENENBAUM, A. M. Estruturas de Dados Usando C. Makron Books, 1995 - EDAS2
+
+Palavras-chave:
+PHL - ALGORITMOS E ESTRUTURA DE DADOS; C - LINGUAGEM DE PROGRAMACAO; DADOS - ESTRUTURAS.
+
+Taxonomia ACM:
+Language types -&gt; Imperative Languages //-&gt; C  
+Language features -&gt; Control Structures
+Language features -&gt; Recursion</rdfs:comment>
+        <untitled-ontology-10:AltLabel xml:lang="pt">Estruturas Dados C</untitled-ontology-10:AltLabel>
+        <untitled-ontology-10:PrefLabel xml:lang="pt">Estruturas de dados usando C</untitled-ontology-10:PrefLabel>
+        <untitled-ontology-10:AltLabel xml:lang="pt">estruturas dados c</untitled-ontology-10:AltLabel>
+        <untitled-ontology-10:AltLabel xml:lang="pt">estruturas de dados usando c</untitled-ontology-10:AltLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Fundamentos_da_programação_de_computadores:_Algoritmos,_Pascal,_C/C++_e_Java -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-10;Fundamentos_da_programação_de_computadores:_Algoritmos,_Pascal,_C/C++_e_Java">
+        <rdf:type rdf:resource="&untitled-ontology-10;Control_structures"/>
+        <rdf:type rdf:resource="&untitled-ontology-10;Imperative_languages"/>
+        <rdf:type rdf:resource="&untitled-ontology-10;Livros"/>
+        <rdf:type rdf:resource="&untitled-ontology-10;Object_oriented_languages"/>
+        <rdfs:label xml:lang="pt">FundamentosDaProgramaçãoDeComputadores:Algoritmos,Pascal,C/C++EJava</rdfs:label>
+        <untitled-ontology-10:Tag rdf:datatype="&xsd;string">ALGORITMOS; ESTRUTURA DE DADOS</untitled-ontology-10:Tag>
+        <untitled-ontology-10:Tag rdf:datatype="&xsd;string">PHL - INFORMATICA</untitled-ontology-10:Tag>
+        <rdfs:comment>ASCENCIO, Ana F. G.; CAMPOS, Edilene A. V. Fundamentos da programação de computadores: Algoritmos, Pascal, C/C++ e Java. 2. ed. Prentice-Hall, 2007.  - LPVS2
+
+Palavras-chave:
+PHL - INFORMATICA; ALGORITMOS; ESTRUTURA DE DADOS; ENGENHARIA DE SOFTWARE; LINGUAGEM DE PROGRAMACAO.
+
+Taxonomia ACM:
+Language types -&gt; Imperative Languages //-&gt; Algoritmo / Pascal / C
+Language types -&gt; Object oriented languages  // -&gt; C++ / Java
+Language features -&gt; Control Structures</rdfs:comment>
+        <untitled-ontology-10:PrefLabel xml:lang="pt">Fundamentos da programação de computadores: Algoritmos, Pascal, C/C++ e Java</untitled-ontology-10:PrefLabel>
+        <untitled-ontology-10:AltLabel xml:lang="pt">fundamentos da programacao de computadores</untitled-ontology-10:AltLabel>
+        <untitled-ontology-10:AltLabel xml:lang="pt">fundamentos da programacao de computadores: algoritmos, pascal, c/c++ e java</untitled-ontology-10:AltLabel>
+        <untitled-ontology-10:AltLabel xml:lang="pt">fundamentos da programação de computadores</untitled-ontology-10:AltLabel>
+        <untitled-ontology-10:AltLabel xml:lang="pt">fundamentos da programação de computadores: algoritmos, pascal, c/c++ e java</untitled-ontology-10:AltLabel>
+        <untitled-ontology-10:AltLabel xml:lang="pt">fundamentos programacao computadores: algoritmos, pascal, c/c++ e java</untitled-ontology-10:AltLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#GarciaG -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-10;GarciaG">
+        <rdf:type rdf:resource="&untitled-ontology-10;Autores"/>
+        <untitled-ontology-10:AutorDe rdf:resource="&untitled-ontology-10;Introdução_à_Programação:_500_Algoritmos_Resolvidos"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Introdução_à_Programação:_500_Algoritmos_Resolvidos -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-10;Introdução_à_Programação:_500_Algoritmos_Resolvidos">
+        <rdf:type rdf:resource="&untitled-ontology-10;Control_structures"/>
+        <rdf:type rdf:resource="&untitled-ontology-10;Imperative_languages"/>
+        <rdf:type rdf:resource="&untitled-ontology-10;Livros"/>
+        <rdfs:label xml:lang="pt">IntroduçãoAProgramação:500AlgoritmosResolvidos</rdfs:label>
+        <untitled-ontology-10:Tag rdf:datatype="&xsd;string">PHL - ALGORITMOS</untitled-ontology-10:Tag>
+        <untitled-ontology-10:Tag rdf:datatype="&xsd;string">Programação</untitled-ontology-10:Tag>
+        <untitled-ontology-10:AltLabel xml:lang="pt">Introducao a Programacao</untitled-ontology-10:AltLabel>
+        <untitled-ontology-10:AltLabel xml:lang="pt">Introducao a Programacao: 500 Algoritmos Resolvidos</untitled-ontology-10:AltLabel>
+        <untitled-ontology-10:AltLabel xml:lang="pt">Introdução à Programação</untitled-ontology-10:AltLabel>
+        <untitled-ontology-10:PrefLabel xml:lang="pt">Introdução à Programação: 500 Algoritmos Resolvidos</untitled-ontology-10:PrefLabel>
+        <rdfs:comment>LOPES, Anita; GARCIA, Guto. Introdução à Programação: 500 Algoritmos Resolvidos. Campus, 2002. - LOGS1
+
+Palavras-chave:
+PHL - ALGORITMOS; Programação;
+
+Taxonomia ACM:
+Language types -&gt; Imperative Languages //-&gt; Algoritmo
+Language features -&gt; Control Structures</rdfs:comment>
+        <untitled-ontology-10:AltLabel xml:lang="pt">introdução à programação</untitled-ontology-10:AltLabel>
+        <untitled-ontology-10:AltLabel xml:lang="pt">introdução à programação: 500 Algoritmos Resolvidos</untitled-ontology-10:AltLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#KollingM -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-10;KollingM">
+        <rdf:type rdf:resource="&untitled-ontology-10;Autores"/>
+        <untitled-ontology-10:AutorDe rdf:resource="&untitled-ontology-10;Programação_Orientada_a_Objetos_com_Java:_Uma_Introdução_Prática_usando_o_BlueJ"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#LarmanC -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-10;LarmanC">
+        <rdf:type rdf:resource="&untitled-ontology-10;Autores"/>
+        <untitled-ontology-10:AutorDe rdf:resource="&untitled-ontology-10;Utilizando_UML_e_padrões:_uma_introdução_à_análise_e_ao_projeto_orientados_a_objetos_e_ao_desenvolvimento_interativo"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#LopesA -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-10;LopesA">
+        <rdf:type rdf:resource="&untitled-ontology-10;Autores"/>
+        <untitled-ontology-10:AutorDe rdf:resource="&untitled-ontology-10;Introdução_à_Programação:_500_Algoritmos_Resolvidos"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Programação_Orientada_a_Objetos_com_Java:_Uma_Introdução_Prática_usando_o_BlueJ -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-10;Programação_Orientada_a_Objetos_com_Java:_Uma_Introdução_Prática_usando_o_BlueJ">
+        <rdf:type rdf:resource="&untitled-ontology-10;Control_structures"/>
+        <rdf:type rdf:resource="&untitled-ontology-10;Livros"/>
+        <rdf:type rdf:resource="&untitled-ontology-10;Object_oriented_languages"/>
+        <rdfs:label xml:lang="pt">ProgramaçãoOrientadaAObjetosComJava:UmaIntroduçãoPráticaUsandoOBlueJ</rdfs:label>
+        <untitled-ontology-10:Tag rdf:datatype="&xsd;string">CIENCIA DA COMPUTACAO</untitled-ontology-10:Tag>
+        <untitled-ontology-10:Tag rdf:datatype="&xsd;string">INFORMATICA</untitled-ontology-10:Tag>
+        <untitled-ontology-10:Tag rdf:datatype="&xsd;string">PHL - LINGUAGEM DE PROGRAMACAO - JAVA</untitled-ontology-10:Tag>
+        <untitled-ontology-10:Tag rdf:datatype="&xsd;string">PROGRAMACAO ORIENTADA A OBJETO</untitled-ontology-10:Tag>
+        <rdfs:comment>BARNES, D.; KOLLING, M. Programação Orientada a Objetos com Java: Uma Introdução Prática usando o BlueJ. 4. ed. Pearson, 2009. - POOS3
+
+Palavras-chave:
+PHL - LINGUAGEM DE PROGRAMACAO - JAVA; PROGRAMACAO ORIENTADA A OBJETO; INFORMATICA ; CIENCIA DA COMPUTACAO.
+
+Taxonomia ACM:
+Language types -&gt; Object oriented languages  // -&gt; Java
+Language features -&gt; Control Structures</rdfs:comment>
+        <untitled-ontology-10:AltLabel xml:lang="pt">Programacao orientada a objetos com Java</untitled-ontology-10:AltLabel>
+        <untitled-ontology-10:PrefLabel xml:lang="pt">Programação orientada a objetos com Java: Uma Introdução Prática Usando o BlueJ</untitled-ontology-10:PrefLabel>
+        <untitled-ontology-10:AltLabel xml:lang="pt">programacao orientada a objetos</untitled-ontology-10:AltLabel>
+        <untitled-ontology-10:AltLabel xml:lang="pt">programacao orientada a objetos com java uma introducao pratica usando o bluej</untitled-ontology-10:AltLabel>
+        <untitled-ontology-10:AltLabel xml:lang="pt">programacao orientada a objetos com java: uma introdução prática usando o bluej</untitled-ontology-10:AltLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#TenebaumAM -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-10;TenebaumAM">
+        <rdf:type rdf:resource="&untitled-ontology-10;Autores"/>
+        <untitled-ontology-10:AutorDe rdf:resource="&untitled-ontology-10;Estruturas_de_Dados_Usando_C"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joaopaulovolpate/ontologies/2016/0/untitled-ontology-10#Utilizando_UML_e_padrões:_uma_introdução_à_análise_e_ao_projeto_orientados_a_objetos_e_ao_desenvolvimento_interativo -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-10;Utilizando_UML_e_padrões:_uma_introdução_à_análise_e_ao_projeto_orientados_a_objetos_e_ao_desenvolvimento_interativo">
+        <rdf:type rdf:resource="&untitled-ontology-10;Livros"/>
+        <rdf:type rdf:resource="&untitled-ontology-10;Object_oriented_languages"/>
+        <rdfs:label xml:lang="pt">UtilizandoUMLEPadrões:UmaIntroduçãoÀAnáliseEAoProjetoOrientadoAObjetosEAoDesenvolvimentoInterativo</rdfs:label>
+        <untitled-ontology-10:Tag rdf:datatype="&xsd;string">ORIENTACAO A OBJETO</untitled-ontology-10:Tag>
+        <untitled-ontology-10:Tag rdf:datatype="&xsd;string">PHL - INFORMATICA</untitled-ontology-10:Tag>
+        <untitled-ontology-10:Tag rdf:datatype="&xsd;string">PROJETO ORIENTADO A OBJETO</untitled-ontology-10:Tag>
+        <untitled-ontology-10:Tag rdf:datatype="&xsd;string">UML (LINGUAGEM DE MODELAGEM)</untitled-ontology-10:Tag>
+        <untitled-ontology-10:Tag rdf:datatype="&xsd;string">UML - ORIENTACAO A OBJETO</untitled-ontology-10:Tag>
+        <rdfs:comment>LARMAN, Craig. Utilizando UML e padrões: uma introdução à análise e ao projeto orientados a objetos e ao desenvolvimento interativo. Bookman, 2007.  - AOOS3
+
+Palavras-chave:
+PHL - INFORMATICA; ORIENTACAO A OBJETO; UML (LINGUAGEM DE MODELAGEM); UML - ORIENTACAO A OBJETO; PROJETO ORIENTADO A OBJETO.
+
+Taxonomia ACM:
+Language types -&gt; Object oriented languages</rdfs:comment>
+        <untitled-ontology-10:AltLabel xml:lang="pt">Utilizando UML e Padrões</untitled-ontology-10:AltLabel>
+        <untitled-ontology-10:PrefLabel xml:lang="pt">Utilizando UML e Padrões : Uma introdução à análise e ao projeto orientado a objetos e ao desenvolvimento interativo</untitled-ontology-10:PrefLabel>
+        <untitled-ontology-10:PrefLabel xml:lang="pt">Utilizando UML e Padrões: Uma introdução à análise e ao projeto orientados a objetos e ao desenvolvimento interativo</untitled-ontology-10:PrefLabel>
+        <untitled-ontology-10:AltLabel xml:lang="pt">Utilizando uml e padroes</untitled-ontology-10:AltLabel>
+        <untitled-ontology-10:AltLabel xml:lang="pt">utilizando uml e padrões</untitled-ontology-10:AltLabel>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
